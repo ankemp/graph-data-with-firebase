@@ -2,6 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
+## Setup
+
+Run `mkdir src/environments`. Create two files: environment.prod.ts and environment.ts.
+
+environment.prod.ts:
+``` typescript
+export const environment = {
+  production: true
+};
+```
+
+environment.ts:
+``` typescript
+export const environment = {
+    production: false,
+    firebase: {
+        apiKey: '<your-key>',
+        authDomain: '<your-project-authdomain>',
+        databaseURL: '<your-database-URL>',
+        projectId: '<your-project-id>',
+        storageBucket: '<your-storage-bucket>',
+        messagingSenderId: '<your-messaging-sender-id>'
+    }
+};
+```
+
+To get more help, look at firebase [install & setup](https://github.com/angular/angularfire2/blob/master/docs/1-install-and-setup.md).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
